@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повторитель сообщений</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="/css/messageRepeater.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="shortcut icon" href="/img/icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <h1 style="position: relative; top: 50px;" class="title">Повторитель сообщений <i class="fa-solid fa-message"></i>
+    </h1>
+
+    <div class="wrapper">
+        <h1 class="title">Введите сообщение сюда <i class="fa-solid fa-arrow-right"></i></h1>
+        <input class="message-input" type="text" name="message" id="messageInput" placeholder="сюда:" required>
+
+        <label for="repeat">Количество повторов <i class="fa-solid fa-arrow-right"></i></label>
+        <input type="number" id="repeat" class="repeat" required>
+
+        <div class="checkbox-wrapper">
+            <div class="checkbox-option">
+                <input type="checkbox" id="numbered" class="checkbox" checked>
+                <label for="numbered">Нумеровать строки</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="separator" class="checkbox">
+                <label for="separator">Добавить разделитель</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="quotes" class="checkbox">
+                <label for="quotes">Добавить кавычки</label>
+            </div>
+        </div>
+
+        <button id="done-btn" class="done-btn">Готово</button>
+
+        <textarea disabled id="result" class="result"></textarea>
+    </div>
+
+    <script src="/js/messageRepeater.js"></script>
+</body>
+
+</html>
