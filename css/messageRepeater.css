@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: var(--fontFamily);
+  width: 100%;
+}
+
+.title {
+  background: #212121;
+  color: var(--white);
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  top: 300px;
+}
+
+.message-input {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  font-size: 2rem;
+  box-shadow: 1px 10px 30px 5px #808080;
+}
+
+.message-input::placeholder {
+  font-size: 1.95rem;
+  font-family: var(--fontFamily);
+}
+
+.done-btn {
+  width: 250px;
+  height: 70px;
+  background: #3939b2;
+  border: none;
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.done-btn:hover {
+  background: #1919cf;
+  transform: scale(1.05);
+}
+
+.repeat {
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #3939b2;
+  width: 200px;
+  text-align: center;
+}
+
+.result {
+  resize: none;
+  overflow-y: scroll;
+  width: 500px;
+  height: 500px;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  box-shadow: 1px 10px 30px 10px #808080;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: -20px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #f5f7ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 10px 5px 20px 5px #808080;
+}
+
+.checkbox-option:hover {
+  background: #e6ebff;
+  transform: translateY(-3px);
+}
+
+.checkbox-option input {
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.checkbox-option label {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  *:not(body) {
+    max-width: 97%;
+  } 
+
+  body {
+    width: 100%;
+  }
+
+  .checkbox-option label {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .checkbox-wrapper {
+    flex-direction: column;
+  }
+}
